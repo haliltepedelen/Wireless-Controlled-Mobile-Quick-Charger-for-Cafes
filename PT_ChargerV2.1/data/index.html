@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css" crossorigin="anonymous">
+</head>
+
+<body>
+  <div>
+    <div class="card">
+      <h2 class="text-center">Charger Controlling System</h2>
+      <p>Set CHARGER ON.</br><a class="m-1 btn-primary" href="/H">HERE</a></p>
+      <p>Set CHARGER OFF.</br><a class="m-1 btn-secondary" href="/L">HERE</a></p>
+
+      <p>Set Wireless CHARGER ON.</br><a class="m-1 btn-primary" href="/I">HERE</a></p>
+      <p>Set Wireless CHARGER OFF.</br><a class="m-1 btn-secondary" href="/J">HERE</a></p>
+
+      <p id="rekuest" style="font-weight: 700;">
+        <bold>%REKUEST%</bold>
+      </p>
+    </div>
+  </div>
+</body>
+
+<script>
+  setInterval(function () {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("rekuest").innerHTML = this.responseText;
+        if (this.responseText == "Requesting...") {
+        alert("Charging Request...");
+      }
+      }
+    };
+    xhttp.open("GET", "/rekuest", true);
+    xhttp.send();
+  }, 500);
+</script>
+
+</html>

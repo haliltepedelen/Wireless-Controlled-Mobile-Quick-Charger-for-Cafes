@@ -1,0 +1,60 @@
+html,body {
+    font-family: Arial;
+    display: inline-block;
+    margin: 0;
+    padding:0;
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    overflow: hidden;
+   }
+
+   p{
+       font-size: 22px;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       font-weight: 500;
+       margin: 5px;
+   }
+
+   .btn-primary:link, .btn-primary:visited {
+    background-color: #5005F2;
+    color: white;
+    padding: 8px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+  }
+  
+  .btn-primary:hover, .btn-primary:active {
+    background-color: #15038C;
+  }
+
+  .btn-secondary:link, .btn-secondary:visited {
+    background-color: #15038C;
+    color: white;
+    padding: 8px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5px;
+  }
+  
+  .btn-secondary:hover, .btn-secondary:active {
+    background-color: #010440;
+  }
+
+  .m-1{
+    margin: 10px 0;
+  }
+
+  div { 
+    zoom: 0.9; 
+} 
+
+.card{
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  text-align: center;
+}
